@@ -41,7 +41,14 @@ body{
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
-
+    
+    var dt = new Date();
+    var hours = dt.getHours() ; // gives the value in 24 hours format
+    var AmOrPm = hours >= 12 ? 'pm' : 'am';
+    hours = (hours % 12) || 12;
+    var minutes = dt.getMinutes() ;
+    var finalTime = "Time  - " + hours + ":" + minutes + " " + AmOrPm; 
+    
     var greet;
 
     if (hrs < 12)
@@ -52,6 +59,6 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+="Ranee! " +`<div id="date"> It's ${date}</div>`;
+        greet+="Ranee! " +`<div id="date"> It's ${date}</div>` +`<div id="finalTime"> It's ${finalTime}</div>`;
 </script> 
 </html>
