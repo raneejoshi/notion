@@ -5,7 +5,7 @@
 #lbl {
     font-family: serif;
     font-size: xx-large;
-    color: hotpink;
+    color: black;
     padding: 5px;
     border: 1px solid #ececec;
     text-align: center;
@@ -17,8 +17,14 @@
 #date{
     font-size:large;
 }
+        
+}
+#finalTime{
+    font-size:large;
+}
+        
 body{
-    background-color: Black;
+    background-color: ##FFC0CB;
 }
     </style>
 </head>
@@ -47,7 +53,7 @@ body{
     var AmOrPm = hours >= 12 ? 'pm' : 'am';
     hours = (hours % 12) || 12;
     var minutes = dt.getMinutes() ;
-    var finalTime = "Time  - " + hours + ":" + minutes + " " + AmOrPm; 
+    var finalTime = hours + ":" + minutes + " " + AmOrPm; 
     
     var greet;
 
@@ -59,6 +65,6 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+="Ranee! " +`<div id="date"> It's ${date}</div>` +`<div id="finalTime"> It's ${finalTime}</div>`;
+        greet+="Ranee! " +`<div id="date"> It's ${date}</div>` +`<div id="finalTime"> ${finalTime}</div>`;
 </script> 
 </html>
