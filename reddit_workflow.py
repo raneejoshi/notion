@@ -70,8 +70,8 @@ def reddit_notion(subreddits):
                         user_agent= REDDIT_USER_AGENT)
     for subreddit in subreddits:
         try:
-            test_reddit = reddit.subreddit(subreddit).top("month", limit = 10)
-
+            test_reddit = reddit.subreddit(subreddit).top("day", limit = 10)
+            # test_reddit = reddit.subreddit(subreddit).top("month", limit = 10)
             # test_reddit = reddit.multireddit("reactjs", "programming").top("day")
             # ml_subreddit = reddit.subreddit(mysub)
             for post in test_reddit:
