@@ -60,7 +60,7 @@ def reddit_notion(subreddits):
 
     for i in myneeded:
         try:
-            myurl = i['properties']['actualurl']['url']
+            myurl = i['properties']['URL']['url']
             myset.add(myurl)
         except:
             pass
