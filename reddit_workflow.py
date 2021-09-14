@@ -22,13 +22,13 @@ def create_notionpost(title, score, subreddit, contenturl, created_date, actualu
         'Notion-Version': '2021-08-16',
     }
     data = { "parent": { "database_id": DATABASE_KEY }, "properties": { 
-        "title": {"title": [ { "text": { "content": title } } ] },
-        "score": { "number": score },
-        "subreddit": { "select": { "name": subreddit } },
+        "Name": {"title": [ { "text": { "content": title } } ] },
+        "Views/Votes": { "number": score },
+        "Subreddit": { "select": { "name": subreddit } },
         # "subreddit": { "rich_text": [ { "text": { "content": subreddit } } ] },
         "contenturl": {"url": contenturl}, 
-        "actualurl": {"url": actualurl}, 
-        "created": {"date" : {"start": created_date}}, 
+        "URL": {"url": actualurl}, 
+        "Publish Date": {"date" : {"start": created_date}}, 
     },  }
 
     requests.post('https://api.notion.com/v1/pages', headers=headers, json=data)
