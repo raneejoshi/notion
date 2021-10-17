@@ -40,7 +40,7 @@ def get_subreddits():
         'Notion-Version': '2021-08-16',
         'Authorization': f"Bearer {NOTION_API_KEY}",
     }
-    response = requests.get(f'https://api.notion.com/v1/blocks/{PAGE_KEY}/children?page_size=10', headers=headers)
+    response = requests.get(f'https://api.notion.com/v1/blocks/{PAGE_KEY}/children?page_size=1', headers=headers)
     mylist = response.json()['results'][1]['bulleted_list_item']['text'][0]['plain_text'].split()
     return mylist
 
@@ -70,7 +70,7 @@ def reddit_notion(subreddits):
                         user_agent= REDDIT_USER_AGENT)
     for subreddit in subreddits:
         try:
-            test_reddit = reddit.subreddit(subreddit).top("day", limit = 10)
+            test_reddit = reddit.subreddit(subreddit).top("day", limit = 1)
             # test_reddit = reddit.subreddit(subreddit).top("month", limit = 10)
             # test_reddit = reddit.multireddit("reactjs", "programming").top("day")
             # ml_subreddit = reddit.subreddit(mysub)
