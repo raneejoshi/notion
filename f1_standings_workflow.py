@@ -46,7 +46,7 @@ def get_drivers_standings():
 get_drivers_standings()
 
 CONSTRUCTORS_DATABASE_KEY = os.environ['CONSTRUCTORS_DATABASE_KEY']
-def create_post_constructors_standings(position, positionText, points, wins, nationality, name, constructorID):
+def create_post_constructors_standings(name, position, positionText, points, wins, nationality, constructorID):
 
     headers = {
         'Authorization': f"Bearer {F1_NOTION_API_KEY}",
@@ -70,7 +70,7 @@ def create_post_constructors_standings(position, positionText, points, wins, nat
         print(data)
         #i=i+1
 
-def get_constructors__standings():
+def get_constructors_standings():
     constructors_standings=pyergast.constructor_standings()
     #drivers_standings = drivers_standings.astype({"nationality": str, "driver": str})
     for index, row  in constructors_standings.iterrows():
