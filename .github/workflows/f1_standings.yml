@@ -35,7 +35,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python3 f1_drivers_standings_workflow.py
+        python3 f1_standings_workflow.py
       env:
         F1_NOTION_API_KEY: ${{ secrets.F1_NOTION_API_KEY }}
         DRIVERS_DATABASE_KEY: ${{ secrets.DRIVERS_DATABASE_KEY }}
+        CONSTRUCTORS_DATABASE_KEY:  ${{ secrets.CONSTRUCTORS_DATABASE_KEY}}
