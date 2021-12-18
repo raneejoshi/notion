@@ -2,4 +2,3 @@ requests
 praw
 pyergast
 pandas
-re
