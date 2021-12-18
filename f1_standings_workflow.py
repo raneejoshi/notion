@@ -77,3 +77,4 @@ def get_constructors__standings():
         create_post_constructors_standings(row.name, row.position, row.positionText, row.points, row.wins, row.nationality, row.constructorID)
 
 get_constructors_standings()
+#update
