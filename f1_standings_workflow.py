@@ -55,7 +55,7 @@ def create_post_constructors_standings(name, position, positionText, points, win
     }
    
     data = { "parent": { "database_id": CONSTRUCTORS_DATABASE_KEY }, "properties": { 
-        "driver":  {"title": [ { "text": { "content":  name}} ] },
+        "name":  {"title": [ { "text": { "content":  name}} ] },
         "position": { "number": int(position)},
         "positionText":  {"rich_text": [{"text": {"content":  str(positionText)}}]},
         "points": { "number": float(points)},
