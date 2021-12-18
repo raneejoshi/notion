@@ -2,5 +2,4 @@ requests
 praw
 pyergast
 pandas
-json
 re
