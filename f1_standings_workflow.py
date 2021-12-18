@@ -9,9 +9,6 @@ import re
 F1_NOTION_API_KEY= os.environ['F1_NOTION_API_KEY']
 DRIVERS_DATABASE_KEY = os.environ['DRIVERS_DATABASE_KEY']
 
-#F1_NOTION_API_KEY="secret_tSV9N1ab6tRQDiphT8ys2qmOYuwIF8EUdI9c0kA8Nel"
-#DRIVERS_DATABASE_KEY ="c6f234cec054482fb15ccc8d423779d2"
-
 def create_post_drivers_standings(driverID, position, positionText, points, wins, driver, nationality, constructor, constructorID):
 
     headers = {
