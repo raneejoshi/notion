@@ -8,7 +8,7 @@ URL = 'https://raw.githubusercontent.com/raneejoshi/notion/master/f1db_csv.zip'
 #URL = 'http://ergast.com/downloads/f1db_csv.zip'
 
 # open and save the zip file onto computer
-url = urlopen(URL)
+#url = urlopen(URL)
 output = open('f1db_csv.zip', 'wb')    # note the flag:  "wb"        
 output.write(url.read())
 output.close()
@@ -18,4 +18,6 @@ races=pd.read_csv('f1db_csv.zip/races.csv')
 constructors=pd.read_csv('f1db_csv.zip/constructors.csv')
 drivers=pd.read_csv('f1db_csv.zip/drivers.csv')
 seasons=pd.read_csv('f1db_csv.zip/seasons.csv')
-status=pd.read_csv('status.csv')
+status=pd.read_csv('f1db_csv.zip/status.csv')
+
+print(circuits)
