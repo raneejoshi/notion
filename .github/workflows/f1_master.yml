@@ -35,7 +35,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
   
     - uses: suisei-cn/actions-download-file@v1
-      id: f1db_csv.zip  # Remember to give an ID if you need the output filename
+      id: f1db_csv  # Remember to give an ID if you need the output filename
       name: Download the file
       with:
         url: "http://ergast.com/downloads/f1db_csv.zip"
