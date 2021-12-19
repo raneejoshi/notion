@@ -18,8 +18,3 @@ constructors=pd.read_csv('f1db_csv.zip/constructors.csv')
 drivers=pd.read_csv('f1db_csv.zip/drivers.csv')
 seasons=pd.read_csv('f1db_csv.zip/seasons.csv')
 status=pd.read_csv('status.csv')
-
-qualifying=pd.read_csv('qualifying.csv')
-qualifying = qualifying[qualifying['qualifyId']>qualifying_rowid]
-qualifying.insert(0, column = "DB", value = "Qualifying") 
-
