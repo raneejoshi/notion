@@ -2,5 +2,4 @@ requests
 praw
 pyergast
 pandas
-zipfile
-urllib.request
+zipfile36
