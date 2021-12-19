@@ -33,14 +33,6 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-  
-    - uses: suisei-cn/actions-download-file@v1
-      id: f1db_csv  # Remember to give an ID if you need the output filename
-      name: Download the file
-      with:
-        url: "http://ergast.com/downloads/f1db_csv.zip"
-        target: public/
-        
     - name: Test with pytest
       run: |
         python3 f1_master.py
