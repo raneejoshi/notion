@@ -9,9 +9,9 @@ URL = 'https://raw.githubusercontent.com/raneejoshi/notion/master/f1db_csv.zip'
 
 # open and save the zip file onto computer
 #url = urlopen(URL)
-output = open('f1db_csv.zip', 'wb')    # note the flag:  "wb"        
-output.write(url.read())
-output.close()
+#output = open('f1db_csv.zip', 'wb')    # note the flag:  "wb"        
+#output.write(url.read())
+#output.close()
 
 circuits=pd.read_csv('f1db_csv.zip/circuits.csv')
 races=pd.read_csv('f1db_csv.zip/races.csv')
