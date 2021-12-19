@@ -34,7 +34,6 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Download a file
-        #uses: ******@***.***
         id: ergast
         with:
           file-url: 'http://ergast.com/downloads/f1db_csv.zip'
