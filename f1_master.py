@@ -4,7 +4,8 @@ from urllib.request import urlopen
 import pandas as pd
 import os
 
-URL = 'http://ergast.com/downloads/f1db_csv.zip'
+URL = 'https://raw.githubusercontent.com/raneejoshi/notion/master/f1db_csv.zip'
+#URL = 'http://ergast.com/downloads/f1db_csv.zip'
 
 # open and save the zip file onto computer
 url = urlopen(URL)
