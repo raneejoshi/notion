@@ -23,7 +23,7 @@ def create_notionpost(title, score, subreddit, contenturl, created_date, actualu
     }
     data = { "parent": { "database_id": DATABASE_KEY }, "properties": { 
         "Name": {"title": [ { "text": { "content": title } } ] },
-        "Views/Votes": { "number": score },
+        "Views": { "number": score },
         "Subreddit": { "select": { "name": subreddit } },
         # "subreddit": { "rich_text": [ { "text": { "content": subreddit } } ] },
         "contenturl": {"url": contenturl}, 
